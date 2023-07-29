@@ -2,10 +2,12 @@ mod add;
 mod list;
 mod exc;
 
+
 use std::io;
 use add::adicionar;
 use list::lista;
 use exc::excluir;
+
 
 fn main() {
     println!("🗒  AGENDA 🗒 \n  \ndigite --> (;comd) para ver os comandos disponiveis na agenda");
@@ -21,7 +23,7 @@ fn main() {
     escolha = escolha.trim().to_string();
 
     if escolha.eq(";comd"){
-        println!("\n🔻  COMANDOS 🔺\n \n ;add - (adiciona contatos) \n ;edit -(edita contatos) \n ;rem - (remove contatos) \n ;list - (ver a lista de contatos) \n \n sair - (fecha a agenda) \n ============================ \n \n")
+        println!("\n🔻  COMANDOS 🔺\n \n ;add - (adiciona contatos) \n ;rem - (remove contatos) \n ;list - (ver a lista de contatos) \n \n sair - (fecha a agenda) \n ============================ \n \n")
     }else if escolha.eq(";add") {
         println!("\n");
         adicionar();
